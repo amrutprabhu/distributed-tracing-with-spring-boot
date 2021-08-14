@@ -25,8 +25,8 @@ target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 
 I further go to integrate the visual tool called ZipKin in order to visualize the traces.
 
-![zipkin trace](../zipkin-image.png)
+![zipkin trace](../readme-images/zipkin-image.png)
 
 Here are some trace details when a rest client sent out  request and then the second server receives it, processes the request, and returns the response.
 
-![Zipkin trace details](../zipkin-trace-details.png)
+![Zipkin trace details](../readme-images/zipkin-trace-details.png)
