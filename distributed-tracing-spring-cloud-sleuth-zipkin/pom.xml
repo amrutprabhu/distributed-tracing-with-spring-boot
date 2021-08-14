@@ -11,7 +11,7 @@
 	<groupId>com.amrut.prabhu</groupId>
 	<artifactId>Distributed-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Distributed-Service-1</name>
+	<name>Distributed tracing spring cloud sleuth zipkin</name>
 	<description>Project with Distributed tracing</description>
 	<properties>
 		<java.version>16</java.version>
