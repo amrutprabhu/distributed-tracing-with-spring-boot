@@ -25,8 +25,8 @@ target/Distributed-Service-0.0.1-SNAPSHOT.jar \
 
 I then visualize the traces using the Jaeger server.
 
-![trace Overview](../readme-images/f0e5e5df.png)
+![trace Overview](../readme-images/jaeger-trace-overview.png)
 
 Here are some trace details when a rest client sent out request from Service 1 and Service 2 receives it, processes the request, and returns the response.
 
-![Jaeger Trace details](../readme-images/d352cad9.png)
+![Jaeger Trace details](../readme-images/jaeger-trace-details.png)
