@@ -1,0 +1,39 @@
+name: Build Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  verify-project-build:
+    permissions: # should be removed by this MR: https://github.com/dorny/test-reporter/pull/174/
+      statuses: write
+      checks: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17.0
+          distribution: 'adopt'
+          java-package: 'jdk'
+
+      - name: Build the project
+        working-directory: distributed-tracing-spring-boot-opentelemetry-jaeger
+        run: mvn clean verify
+
+      - name: Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Tests Results
+          path: "**/surefire-reports/*.xml"
+          reporter: java-junit
+          fail-on-error: true
