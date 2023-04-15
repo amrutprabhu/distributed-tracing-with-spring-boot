@@ -11,11 +11,9 @@ import org.springframework.context.annotation.Configuration;
 public class OtlpConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean
     OtlpHttpSpanExporter otlpHttpSpanExporter(@Value("${tracing.url}") String url) {
-        OtlpHttpSpanExporterBuilder builder = OtlpHttpSpanExporter.builder()
-                .setEndpoint(url);
-
-        return builder.build();
+        return OtlpHttpSpanExporter.builder()
+                .setEndpoint(url)
+                .build();
     }
 }
