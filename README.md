@@ -14,3 +14,9 @@ In this repository I explored some distributed tracing implementation.
 ![Jaeger Image](readme-images/jaeger.png)
 
 [ [Spring Boot With Jaeger Tracing based on OpenTracing ](distributed-tracing-spring-cloud-jaeger) ] - In this project I have explored how to integrate Spring Cloud Jaeger with a Spring Boot application and then visualize the traces in a Jaeger server
+
+
+3.
+![OpenTelemetry Image](readme-images/open-telemetry.png)
+
+[ [Spring Boot With OpenTelemetry Jaeger Tracing ](distributed-tracing-spring-boot-opentelemetry-jaeger) ] - In this project I have explored how to integrate OpenTelemetry in a Spring Boot application and then visualize the traces in a Jaeger server
